@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  /* Liquid Glass Base Properties */
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-bg-hover: rgba(255, 255, 255, 0.25);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.25);
+  --glass-blur: blur(16px) saturate(180%);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+  --glass-radius: 16px;
+}
+
+.liquid-glass {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur); /* Safari support */
+  border: var(--glass-border);
+  border-radius: var(--glass-radius);
+  box-shadow: var(--glass-shadow);
+  
+  /* Specular Highlight for a modern "liquid" sheen */
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--glass-bg-hover);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.3);
+    transform: translateY(-2px);
+  }
+}
+
+/* Reset browser defaults and eliminate scrollbar gaps */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrollbars */
+}
+
+/* Ensure padding/borders don't add extra width/height */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Fullscreen container */
+.fullscreen-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #000000; /* Replace with your background color */
+}

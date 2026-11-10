@@ -1,0 +1,13 @@
+<html>
+<body>
+  <div class="navigation-container">
+  @for (item of navItems; track item.link) {
+    <app-nav-bar 
+      [title]="item.title" 
+      [link]="item.link" 
+      [bgImage]="item.bgImage!" 
+    />
+  }
+</div>
+</body>
+</html>

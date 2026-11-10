@@ -1,0 +1,39 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.persistent-header {
+  display: flex;
+  align-items: center;
+  height: 1in;
+  background-color: #808080;
+  padding: 0 1.5rem;
+  z-index: 100;
+}
+.site-title {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: opacity 0.2s ease;
+  margin-right: auto;
+}
+
+.home-logo {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: opacity 0.2s ease;
+  margin-left: auto;
+}
+
+.home-logo:hover {
+  opacity: 0.8;
+}
+
+.content-container {
+  flex: 1;
+}

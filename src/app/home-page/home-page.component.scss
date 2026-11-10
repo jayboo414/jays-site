@@ -1,0 +1,12 @@
+/* Ensure body and html remove default browser margins */
+:host {
+  display: block;
+  width: 100%;
+}
+
+.navigation-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  box-sizing: border-box;
+}
