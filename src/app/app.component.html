@@ -2,6 +2,9 @@
   <a [routerLink]="['/']" class="site-title">
     <h1>Jay van Adrichem Boogaert</h1>
   </a>
+  <a class="header-date">
+    <h1>{{ today | date:'fullDate' }}</h1>
+  </a>
   <a [routerLink]="['/']" class="home-logo">
     <h1>← HOME</h1>
   </a> 

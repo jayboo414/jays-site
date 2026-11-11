@@ -33,6 +33,8 @@ export class HomePageComponent implements OnInit {
     'images/flower_backgrounds/P1015112.JPG'
   ];
 
+  today: Date = new Date();
+  
   navItems: NavItem[] = [
     { title: 'About', link: '/about' },
     { title: 'Photos', link: '/photos' },

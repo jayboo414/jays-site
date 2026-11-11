@@ -7,31 +7,60 @@
 .persistent-header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 1in;
-  background-color: #808080;
+  background: linear-gradient(90deg, #871fc3 0%, #8e1c98 50%, #ae2206 100%);
   padding: 0 1.5rem;
   z-index: 100;
-}
-.site-title {
-  color: #000000;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: opacity 0.2s ease;
-  margin-right: auto;
+  border-bottom: 6px solid #000000;
 }
 
+.site-title,
+.header-date,
 .home-logo {
   color: #000000;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
-  transition: opacity 0.2s ease;
-  margin-left: auto;
+  white-space: nowrap;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
+.site-title,
+.home-logo {
+  transition: opacity 0.2s ease;
+}
+
+.site-title:hover,
 .home-logo:hover {
   opacity: 0.8;
+}
+
+.header-date {
+  position: relative;
+  /* Equal padding creates symmetrical gaps on both sides of date text */
+  padding: 0 2rem; 
+}
+
+/* Full-height vertical bars sitting right in the middle of text gaps */
+.header-date::before,
+.header-date::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: #000000;
+}
+
+.header-date::before {
+  left: 0; /* Placed exactly at the midpoint of left gap */
+}
+
+.header-date::after {
+  right: 0; /* Placed exactly at the midpoint of right gap */
 }
 
 .content-container {
